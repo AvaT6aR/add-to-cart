@@ -46,6 +46,8 @@ function createProductFun(e){
         } else {
             alert('Please Enter Data ..')
         }
+    } else {
+        location.pathname = 'login.html'
     }
     
 }
