@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="">
+    <meta name="keywords" content="">
+    <link rel="shortcut icon" href="img/353838_code_html_web_icon.png" type="image/x-icon">
+    <title>Shoping Cart | Profile Page</title>
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+<header class="header">
+    <div class="container">
+        <div class="row justify-content-between align-items-center">
+            <div class="logo"><a href="index.html">Shoping Cart</a></div>
+            <nav class="item">
+                <ul class="d-flex" id="links">
+                    <li><a href="login.html"> Sign In</a></li>
+                    <li><a href="register.html"> Sign Up</a></li>
+                </ul>
+                <ul id="user_info">
+                    <li class="d-flex">
+                        <img alt="avatar" id="imgUser">
+                        <a href="profile.html" id="user"></a>
+                    </li>
+                    <li><a href="fovorite.html">Fovorite</a></li>
+                    <li><a href="myProducts.html">My Products</a></li>
+                    <li class="shopingCart">
+                        <i class="fa-solid fa-cart-shopping"></i>
+                        <span class="badge"></span>
+                    </li>
+                    <div class="carts-products">
+                        <div></div>
+                        <a href="cartProduct.html">View All Products</a>
+                        <div>
+                            <h5>Total : <span id="total_Price"></span></h5>
+                        </div>
+                    </div>
+                    <li><a href="#" id="logout">Log Out</a></li>
+                </ul>
+            </nav>
+        </div>
+    </div>
+</header>
+<section class="profile">
+    <div class="container mt-5">
+        <div class="row align-items-center">
+            <div class="col-4">
+                <div class="item-img">
+                    <img id="img_url" alt="avatar" class="img-fluid">
+                    <label for="imgFile" class="avatar">
+                        <i class="fa-solid fa-pen"></i>
+                    </label>
+                    <input type="file" id="imgFile" accept="image/" class="d-none"></input>
+                </div>
+            </div>
+            <div class="col-8">
+                <form class="form-group" novalidate id="editProfile">
+                    <input type="text" name="" id="new-username" placeholder="New User Name.." class="form-control mb-3">
+                    <input type="email" name="" id="new-email" placeholder="New Email.." class="form-control mb-3">
+                    <input type="password" name="" id="password" placeholder="Password.." class="form-control mb-3">
+                    <input type="password" name="" id="new-password" placeholder="New Password.." class="form-control mb-3">
+                    <input type="submit" name="" class="form-control bg-primary text-white" value="Update">
+                </form>
+            </div>
+        </div>
+    </div>
+</section>
+<script src="js/user.js"></script>
+<script src="js/data.js"></script>
+<script src="js/cartMenu.js"></script>
+<script src="js/editPrfile.js"></script>
+</body>
+</html>
