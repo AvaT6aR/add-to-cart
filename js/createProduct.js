@@ -17,33 +17,35 @@ function getProductSizeValue(e){
 }
 function createProductFun(e){
     e.preventDefault()
-    let allProducts = JSON.parse(localStorage.getItem('products')) || productsDB;
-    let nameValue = productName.value
-    let descValue = productDesc.value
-    let priceValue = productPrice.value
-    if(nameValue && descValue && priceValue) {
-        let obj = {
-            id: Math.random(10),
-            qty:1,
-            title:nameValue,
-            imgUrl:productImg,
-            size:productSizeValue,
-            price:priceValue,
-            desc:descValue,
-            isMe:true
-        }
-        let newProducts = allProducts ? [...allProducts , obj] : [obj]
-        localStorage.setItem('products' , JSON.stringify(newProducts))
-        productName.value = ''
-        productDesc.value = ''
-        productPrice.value = ''
-        productSizeSelect.value = ''
+    if(localStorage.getItem('username')){
+        let allProducts = JSON.parse(localStorage.getItem('products')) || productsDB;
+        let nameValue = productName.value
+        let descValue = productDesc.value
+        let priceValue = productPrice.value
+        if(nameValue && descValue && priceValue) {
+            let obj = {
+                id: Math.random(10),
+                qty:1,
+                title:nameValue,
+                imgUrl:productImg,
+                size:productSizeValue,
+                price:priceValue,
+                desc:descValue,
+                isMe:true
+            }
+            let newProducts = allProducts ? [...allProducts , obj] : [obj]
+            localStorage.setItem('products' , JSON.stringify(newProducts))
+            productName.value = ''
+            productDesc.value = ''
+            productPrice.value = ''
+            productSizeSelect.value = ''
 
-        setTimeout(() => {
-            location.pathname = 'index.html'
-        } , 500)
-    } else {
-        alert('Please Enter Data ..')
+            setTimeout(() => {
+                location.pathname = 'index.html'
+            } , 500)
+        } else {
+            alert('Please Enter Data ..')
+        }
     }
     
 }
